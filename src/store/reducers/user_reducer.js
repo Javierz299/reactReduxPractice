@@ -1,7 +1,7 @@
 import * as ACTION_TYPES from '../actions/actions_types'
 
 const intitialState = {
-    user_text: 'default',
+    user_text: "",
 }
 
 
