@@ -1,7 +1,9 @@
 import * as ACTION_TYPES from '../actions/actions_types'
 
+
 const initialState = {
      stateprop1: false,
+     
 }
 
 const Reducer1 = (state = initialState, action) => {

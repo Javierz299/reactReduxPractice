@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './app.css'
 import Container1 from './containers/container1'
-
+import Routes from './routes'
 
 class App extends Component {
  
@@ -10,7 +10,7 @@ class App extends Component {
    
   return (
     <div className="App">
-       <Container1 />
+       <Routes />
     </div>
   );
 }

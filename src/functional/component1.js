@@ -1,12 +1,9 @@
 import React from 'react'
 
 
-const Component1 = props => (
+const Component1 = (props) => (
     <div>
-        
-        {props.name}
-        {props.age}
-        {props.prop1}
+        Component1
     </div>
 
 
