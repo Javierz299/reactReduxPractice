@@ -20,9 +20,7 @@ const Reducer1 = (state = initialState, action) => {
                 stateprop1: false
             }
         default:
-            return{
-                state
-            }
+            return state
     }
 }
 export default Reducer1

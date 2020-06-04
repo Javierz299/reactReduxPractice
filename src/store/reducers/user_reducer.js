@@ -14,9 +14,8 @@ const UserReducer = (state = intitialState, action) => {
                 user_text: action.payload,
             }
             default:
-                return {
-                    state
-                }
+                return state
+                
     }
 }
 
