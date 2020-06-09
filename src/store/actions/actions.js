@@ -8,15 +8,15 @@ export const FAILURE = {
     type: ACTION_TYPES.FAILURE
 }
 
-export const success = () => {
+export const login_success = () => {
     return {
-       type: ACTION_TYPES.SUCCESS
+       type: ACTION_TYPES.LOGIN_SUCCESS
     }
 }
 
-export const failure = () => {
+export const login_failure = () => {
     return{
-        type: ACTION_TYPES.FAILURE
+        type: ACTION_TYPES.LOGIN_FAILURE
     }
 }
 

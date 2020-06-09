@@ -7,7 +7,6 @@ const initialState = {
 }
 
 const Reducer1 = (state = initialState, action) => {
-    console.log("initial state",state)
     switch(action.type){
         case ACTION_TYPES.SUCCESS:
             return{

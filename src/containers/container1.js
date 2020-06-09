@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
 import * as ACTIONS from '../store/actions/actions'
+import Auth from '../utils/auth'
 
 import { connect } from 'react-redux'
+const auth = new Auth()
 
 class container1 extends Component {
 
@@ -12,6 +14,7 @@ class container1 extends Component {
       const usertext = "text 1"
         return (
             <div>
+                <button onClick={() => this.props.auth.login()}>Login</button>
                 <button onClick={() => console.log(this.props.user_input)}>get state</button>
                 <button onClick={() => this.props.action1()}>Dispatch action 1</button>
                 <button onClick={() => this.props.action2()}>Dispatch action 2</button>
@@ -38,8 +41,7 @@ function mapDispatchToProps(dispatch){
     return {
         action1: () => dispatch(ACTIONS.SUCCESS),
         action2: () => dispatch(ACTIONS.FAILURE),
-        action_creator1: () => dispatch(ACTIONS.success()),
-        action_creator2: () => dispatch(ACTIONS.failure()),
+       
         action_creator3: (txt) => dispatch(ACTIONS.user_input(txt)),
     }
 
