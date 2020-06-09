@@ -1,8 +1,26 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import * as ACTIONS from '../store/actions/actions'
+
+import history from './history'
 
 
 class AuthCheck extends Component {
+
+  componentDidMount(){
+      console.log(this.props.auth)
+      if(this.props.auth.isAunthenticated()){
+          console.log("success")
+          this.props.login_success()
+          history.replace('/')
+      } else {
+          console.log("failure")
+          this.props.login_failure()
+          history.replace('/')
+      }
+  }
+
+
     render() {
         return (
             <div>
@@ -13,6 +31,7 @@ class AuthCheck extends Component {
 }
 
 function mapStateToProps(state){
+    console.log("authcheck",state)
     return {
 
     }
@@ -20,7 +39,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return{
-
+        login_success: () => dispatch(ACTIONS.login_success()),
+        login_failure: () => dispatch(ACTIONS.login_failure()),
     }
 }
 
