@@ -13,6 +13,7 @@ export default class Auth {
    }) 
 
  login = () => {
+     console.log("login reached")
     this.auth0.authorize()
 }
 
@@ -35,12 +36,13 @@ handleAuth = () => {
 }
    
 logout = () => {
+    console.log('logout reached')
     localStorage.removeItem('access_token')
     localStorage.removeItem('id_token')
     localStorage.removeItem('expiresAt')
 }
 
-isAunthenticated = () => {
+isAuthenticated = () => {
     let expiresAt = JSON.parse(localStorage.getItem('expiresAt'))
     return new Date().getTime() < expiresAt
 }

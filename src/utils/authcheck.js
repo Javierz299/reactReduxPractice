@@ -9,7 +9,7 @@ class AuthCheck extends Component {
 
   componentDidMount(){
       console.log(this.props.auth)
-      if(this.props.auth.isAunthenticated()){
+      if(this.props.auth.isAuthenticated()){
           console.log("success")
           this.props.login_success()
           history.replace('/')

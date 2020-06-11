@@ -12,7 +12,6 @@ class container1 extends Component {
       const usertext = "text 1"
         return (
             <div>
-                <button onClick={() => this.props.auth.login()}>Login</button>
                 <button onClick={() => console.log(this.props.user_input)}>get state</button>
                 <button onClick={() => this.props.action1()}>Dispatch action 1</button>
                 <button onClick={() => this.props.action2()}>Dispatch action 2</button>
