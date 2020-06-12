@@ -27,3 +27,16 @@ export const user_input = (txt) => {
         payload: txt
     }
 }
+
+export const add_profile = (profile) => {
+    return {
+        type: ACTION_TYPES.ADD_PROFILE,
+        payload: profile
+    }
+}
+
+export const remove_profile = () => {
+    return {
+        type: ACTION_TYPES.REMOVE_PROFILE
+    }
+}

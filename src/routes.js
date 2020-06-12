@@ -7,6 +7,7 @@ import ProtectedRoute from './functional/protectedroute'
 
 import Container1 from './containers/container1'
 import Header from  './containers/header'
+import Profile from './containers/profile'
 
 import history from './utils/history'
 import AuthCheck from './utils/authcheck'
@@ -51,6 +52,7 @@ class routes extends Component {
                     <Route path="/component/:id" render={(props) => <Component1 {...props} />}/>
 
                     <PrivateRoute path="/privateroute" auth={auth}  component={ProtectedRoute} />
+                    <PrivateRoute  auth={auth}  component={Profile} />
                     </Switch>
                     </div>
                 </Router>

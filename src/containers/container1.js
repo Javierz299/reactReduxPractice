@@ -12,7 +12,7 @@ class container1 extends Component {
       const usertext = "text 1"
         return (
             <div>
-                <button onClick={() => console.log(this.props.user_input)}>get state</button>
+                <button onClick={() => console.log(this.props.user_profile)}>get state</button>
                 <button onClick={() => this.props.action1()}>Dispatch action 1</button>
                 <button onClick={() => this.props.action2()}>Dispatch action 2</button>
 
@@ -30,7 +30,8 @@ function mapStateToProps(state){
     console.log(state)
     return {
         stateprop1: state.reducer1.stateprop1,
-        user_input: state.user_reducer.user_text
+        user_input: state.user_reducer.user_text,
+        user_profile: state.auth_reducer.profile,
     }
 }
 

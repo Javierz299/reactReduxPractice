@@ -13,7 +13,7 @@ class Header extends Component {
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/privateroute">PrivateRoute</Link>
-                
+                <Link to="/profile">Profile</Link>
                 {!this.props.is_authenticated
                 ? <button onClick={() => this.props.auth.login()}>Login</button>
                 : <button onClick={() => this.props.auth.logout()}>Logout</button>
